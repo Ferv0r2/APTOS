@@ -28,9 +28,9 @@ const tokenClient = new TokenClient(client);
   console.log(`Account : ${orbit.address()}`);
 
   // 잔액 전후 조회
-  console.log(`Before : ${await coinClient.checkBalance(orbit)}`);
   await faucetClient.fundAccount(orbit.address(), 100_000_000);
-  console.log(`After : ${await coinClient.checkBalance(orbit)}`);
+  await faucetClient.fundAccount(ramp.address(), 100_000_000);
+  console.log(`Balance : ${await coinClient.checkBalance(orbit)}`);
 
   // NFT 콜렉션 생성
   const collectionName = "Orbit's Collection";
@@ -89,7 +89,7 @@ const tokenClient = new TokenClient(client);
     tokenName,
     1,
     0
-  ); // <:!:section_9
+  );
   await client.waitForTransaction(tranferToken, { checkSuccess: true });
 
   // 토큰 전송 수락
@@ -150,6 +150,6 @@ const tokenClient = new TokenClient(client);
     property_version: "0",
   });
 
-  console.log(`Alice's token balance: ${orbitBalance2["amount"]}`);
-  console.log(`Bob's token balance: ${rampBalance2["amount"]}`);
+  console.log(`Orbit's token balance: ${orbitBalance2["amount"]}`);
+  console.log(`Ramp's token balance: ${rampBalance2["amount"]}`);
 })();
