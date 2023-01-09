@@ -6,6 +6,10 @@ Aptos is a Layer 1 for everyone. In the Ohlone language, "Aptos" means "The Peop
 
 - [APTOS DOCS](https://aptos.dev/)
 
+- [Faucet](https://www.aptosfaucet.com/)
+
+- [Wallet - (Petra)](https://chrome.google.com/webstore/detail/petra-aptos-wallet/ejjladinnckdgjemekebdpeokbikhfci/related)
+
 ## Testing
 
 ```
@@ -20,3 +24,5 @@ npm start
 3. 2번과 달리 `directTransferToken`메서드를 활용하면 `claimToken`없이 다이렉트로 전송이 가능함
 
 4. 트랜잭션을 전송하려면 `client.waitForTransaction`메서드를 통해 처리할 수 있음
+
+5. APTOS는 `Mainnet`, `Testnet` 뿐만 아니라 `Devnet` 도 운영됨
